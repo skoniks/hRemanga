@@ -1,0 +1,44 @@
+{
+  "name": "hRemanga - читай мангу бесплатно!",
+  "description": "Дает возможность читать платные главы на сайте REMANGA.ORG если хотя бы один из пользователей расширения их уже купил.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "/images/icon_16.png",
+    "32": "/images/icon_32.png",
+    "48": "/images/icon_48.png",
+    "128": "/images/icon_128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://remanga.org/*",
+    "*://*.remanga.org/*",
+    "*://*.sknx.ru/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/icon_white_16.png",
+      "32": "/images/icon_white_32.png",
+      "48": "/images/icon_white_48.png",
+      "128": "/images/icon_white_128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://remanga.org/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}

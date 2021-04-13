@@ -1,0 +1,27 @@
+body {
+  color: #f2f2f2;
+  background: #121212;
+  padding: 20px;
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 svg {
+  fill: #f2f2f2;
+  width: 1em;
+  height: 1em;
+  vertical-align: top;
+  display: inline-block;
+  padding-top: 5px;
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  color: aqua;
+}
