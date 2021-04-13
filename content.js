@@ -1,14 +1,14 @@
 var lastLocation = '';
-var lastAppHtml = '';
+var lastAppCount = 0;
 var checkLocation = () => {
-  let html = document.getElementById('app').innerHTML;
+  let count = document.querySelectorAll('#app>div:first-of-type>div').length;
   if (location.href != lastLocation) {
     lastLocation = location.href;
-    lastAppHtml = html;
+    lastAppCount = count;
     let chapter = getChapter();
     if (chapter) loadChapter(chapter);
-  } else if (lastAppHtml != html) {
-    lastAppHtml = html;
+  } else if (lastAppCount != count) {
+    lastAppCount = count;
     let chapter = getChapter();
     if (chapter) loadChapter(chapter);
   }

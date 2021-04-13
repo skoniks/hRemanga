@@ -1,7 +1,7 @@
 {
   "name": "hRemanga - читай мангу бесплатно!",
   "description": "Дает возможность читать платные главы на сайте REMANGA.ORG если хотя бы один из пользователей расширения их уже купил.",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
   "icons": {
     "16": "/images/icon_16.png",
