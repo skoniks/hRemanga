@@ -1,7 +1,14 @@
 var lastLocation = '';
+var lastAppHtml = '';
 var checkLocation = () => {
+  let html = document.getElementById('app').innerHTML;
   if (location.href != lastLocation) {
     lastLocation = location.href;
+    lastAppHtml = html;
+    let chapter = getChapter();
+    if (chapter) loadChapter(chapter);
+  } else if (lastAppHtml != html) {
+    lastAppHtml = html;
     let chapter = getChapter();
     if (chapter) loadChapter(chapter);
   }
