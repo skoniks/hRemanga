@@ -22,6 +22,11 @@ p {
   text-align: justify;
 }
 
+p:last-of-type {
+  text-align: center;
+  margin-bottom: 0;
+}
+
 a {
   color: aqua;
 }
