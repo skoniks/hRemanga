@@ -1,7 +1,7 @@
 {
   "name": "hReadmanga",
   "description": "Дает возможность читать платные главы на сайте REMANGA.ORG если хотя бы один из пользователей расширения их уже купил.",
-  "version": "2.1",
+  "version": "2.2",
   "manifest_version": 3,
   "icons": {
     "16": "/images/icon_16.png",
@@ -21,6 +21,8 @@
   "host_permissions": [
     "*://remanga.org/*",
     "*://*.remanga.org/*",
+    "*://реманга.орг/*",
+    "*://*.реманга.орг/*",
     "*://*.sknx.ru/*",
     "*://raw.githubusercontent.com/*"
   ],
@@ -30,7 +32,8 @@
   "content_scripts": [
     {
       "matches": [
-        "*://remanga.org/*"
+        "*://remanga.org/*",
+        "*://реманга.орг/*"
       ],
       "js": [
         "content.js"
